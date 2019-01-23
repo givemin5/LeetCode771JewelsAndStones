@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LeetCode771JewelsAndStones
 {
@@ -9,6 +8,12 @@ namespace LeetCode771JewelsAndStones
         [TestMethod]
         public void TestMethod1()
         {
+            var solution = new Solution();
+            var J = "aA";
+            var S = "aAAbbbb";
+            var actual = solution.NumJewelsInStones(J, S);
+            var expected = 3;
+            Assert.AreEqual(3, actual);
         }
     }
 }
