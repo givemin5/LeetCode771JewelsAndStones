@@ -2,8 +2,13 @@
 
 
 @mytag
-Scenario: NumJewelsInStones
-	Given I have entered J aA into the solution
-	And I have entered S aAAbbbb into the solution
+Scenario Outline: NumJewelsInStones
+	Given I have entered J <J> into the solution
+	And I have entered S <S> into the solution
 	When I press NumJewelsInStones
-	Then the result should be 3 on the screen
+	Then the result should be <result> on the screen
+
+	Examples: 
+	| J  | S       | result |
+	| aA | aAAbbbb | 3      |
+	| z  | ZZ      | 0      |
