@@ -10,7 +10,23 @@ namespace LeetCode771JewelsAndStones
     {
         public int NumJewelsInStones(string J, string S)
         {
-            throw new NotImplementedException();
+            int count = 0;
+            var js = J.ToArray();
+
+            var ss = S.ToArray();
+
+            foreach (var j in js)
+            {
+                foreach (var s in ss)
+                {
+                    if (j == s)
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
         }
     }
 }
